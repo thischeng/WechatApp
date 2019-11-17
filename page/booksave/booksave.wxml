@@ -1,0 +1,37 @@
+<view class='page'>
+   <view class="weui-cells__title">藏书方式</view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="../weuiSavepage/weuisavepage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">手动录入</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="./camera/camera" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">扫码入库</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="./writeIn/writeIn" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">手动搜索</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+          </view>
+  <view class="weui-cells__title">已在架书籍</view>
+  <scroll-view class="bookScroll" scroll-y="true" style="height:{{scrollHeight}}px"
+  bindscrolltolower="scrollLowerEvent">
+    <block wx:for="{{pageData}}">
+        <view class="list-item" data-id="{{item.id}}" bindtap="toDetailPage">
+          <view class="index-list-item">
+            <view class="cover">
+              <image class="cover-img" src="{{item.image}}"/>
+            </view>
+            <view class="content">
+              <view class="bookTitleAndShell">
+                <view class="title">{{item.title}}</view>
+                <view class="bookShell">{{item.shellname}}</view>
+              </view>
+              <view class="bookAuther">{{item.author}}</view>
+            </view>
+          </view>
+        </view>
+    </block>
+  </scroll-view>
+</view>

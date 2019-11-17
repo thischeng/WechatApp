@@ -1,0 +1,80 @@
+<view class="bookTotal">
+  <view class="number">
+    {{count}}
+  </view>
+  <view class="cangshuText">
+    全部藏书
+  </view>
+</view>
+
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells__title">书籍管理</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-key="bookShellList" data-title="书柜" bindtap="toManage">
+                <view class="weui-cell__bd">书柜管理</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-key="bookInBorrow" data-title="书借出" bindtap="toManage">
+                <view class="weui-cell__bd">借出管理</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">藏书分析</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-key="getAuthor" data-title="作者" bindtap="toManage">
+                <view class="weui-cell__bd">作者</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-key="bookInPublish" data-title="出版社" bindtap="toManage">
+                <view class="weui-cell__bd">出版社</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-key="bookInWay" data-title="购买渠道" bindtap="toManage">
+                <view class="weui-cell__bd">购买渠道</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">阅读进度</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-key="bookInRead" data-title="书在阅读" bindtap="toManage">
+                <view class="weui-cell__bd">在读图书</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-key="bookInFinish" data-title="书已阅读完" bindtap="toManage">
+                <view class="weui-cell__bd">已读图书</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+
+
+        <view class="weui-cells__title">快捷入口</view>
+          <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="./image/2.jpg" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">京东</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="./image/1.jpg" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">当当</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="./image/3.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">豆瓣读书</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+          </view>
+    </view>
+</view>
+
+<view class="foot"/>

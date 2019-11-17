@@ -1,0 +1,51 @@
+<view class="search-container" style="position:sticky ; top: 0;">
+  <input type="text" bindinput="searchInputEvent" placeholder="输入书名搜索"></input><icon bindtap="searchClickEvent"  type="search" size="20"/>
+</view>
+
+<view class="logo" wx:if="{{isInit}}">
+      <image src="../../images/book.png" />
+      <view><text>GoBook</text></view>
+      <text style="font-size:30rpx;">Designed by ccheng</text>
+</view>
+
+
+<scroll-view class="bookScroll" scroll-y="true" bindscrolltolower="scrollLowerEvent">
+    <block wx:for="{{pageData}}">
+        <view class="list-item" data-id="{{item.id}}" bindtap="toDetailPage">
+          <view class="index-list-item">
+            <view class="cover">
+              <image class="cover-img" src="{{item.image}}"/>
+            </view>
+            <view class="content">
+              <view class="bookTitleAndShell">
+                <view class="title">{{item.title}}</view>
+                <view class="bookShell">{{item.shellname}}</view>
+              </view>
+              <view class="bookAuther">{{item.author}}</view>
+            </view>
+          </view>
+        </view>
+    </block>
+    <!-->
+    <navigator url="../detail/detail">
+     <view class="list-item" data-bid="{{item.id}}" bindtap="toDetailPage">
+          <view class="index-list-item">
+            <view class="cover">
+              <image class="cover-img" src="https://img3.doubanio.com/view/ark_article_cover/retina/public/7828900.jpg?v=0"></image>
+            </view>
+            <view class="content">
+              <view class="bookTitleAndShell">
+                <view class="title">三国演义{{item.title}}</view>
+                <view class="bookShell">默认书柜</view>
+              </view>
+              <view class="bookAuther">王晟</view>
+              <view class="other">1111</view>
+            </view>
+          </view>
+      </view>
+    </navigator>
+    </-->
+</scroll-view>
+    
+
+

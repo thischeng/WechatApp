@@ -1,0 +1,9 @@
+<view class="weui-cells__title">共{{length}}个{{title}}</view>
+<view wx:for="{{pageData}}">
+  <view class="weui-cells weui-cells_after-title" data-title="{{title}}" data-name="{{item.shell}}" bindtap="toDetailPage">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">{{item.shell}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+  </view>
+</view>

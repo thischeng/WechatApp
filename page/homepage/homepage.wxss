@@ -1,0 +1,51 @@
+
+.hp_imageView{
+  height:  100px;
+min-height:  0%;
+display:  flex;
+margin-top:  110px;
+align-items:  flex-start;
+justify-content: center;
+
+}
+
+.hp_image{
+  height:  100px;
+width: 25%;
+
+}
+
+.hp_login{
+  display:  flex;
+  text-align:  center;
+  line-height: 4em;
+}
+
+.hp_title{
+  min-height:  40px;
+  width:  40%;
+  text-align: right;
+}
+
+.hp_view{
+  min-height:  40px;
+  width:  60%;
+  display: flex;
+}
+
+.hp_input{
+ margin-top:  25px;
+  width:  80%;
+  height: 1.4rem; 
+}
+
+.page-section-ctn {
+  text-align: center;
+}
+
+.image {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  width: 200rpx;
+  height: 170rpx;
+}

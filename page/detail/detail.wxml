@@ -1,0 +1,37 @@
+<view wx:if="{{bookData}}">
+<view class="cover-container">
+    <image src="{{bookData.image}}"></image>
+</view>
+
+<view class="setState">
+  <view class="setState1">
+    设置阅读状态
+  </view>
+  <view class="setState2">
+    设置借阅状态
+  </view>
+</view>
+<view class="book-meta">
+    <view class="meta-info">
+        <view class="book-title" data-title="title" data-id="{{bookData.id}}" data-key="{{bookData.title}}" bindtap='toUpdatePage'>{{bookData.title}}</view>
+        <view class="other-meta" data-title="author" data-id="{{bookData.id}}" data-key="{{bookData.author}}" bindtap='toUpdatePage'>作者:{{bookData.author}}</view>
+        <view wx:if="{{bookData.translator}}" class="other-meta" data-title="translater" data-id="{{bookData.id}}" data-key="{{bookData.translater}}" bindtap='toUpdatePage'>译者:{{bookData.translater}}</view>
+        <view class="other-meta" data-title="publish" data-id="{{bookData.id}}" data-key="{{bookData.publish}}" bindtap='toUpdatePage'>出版社：{{bookData.publish}}</view>
+        <view class="other-meta" data-title='publishdate' data-id="{{bookData.id}}" data-key="{{bookData.publishdate}}" bindtap='toUpdatePage'>出版日期：{{bookData.publishdate}}</view>
+        <view class="other-meta" data-title="price" data-id="{{bookData.id}}" data-key="{{bookData.price}}" bindtap='toUpdatePage'>定价:{{bookData.price}}</view>
+        <view class="other-meta" data-title="isbn" data-id="{{bookData.id}}" data-key="{{bookData.isbn}}" bindtap='toUpdatePage'>ISBN:{{bookData.isbn}}</view>
+        <view class="other-meta" data-title="shellname" data-id="{{bookData.id}}" data-key="{{bookData.shellname}}" bindtap='toUpdatePage'>书柜:{{bookData.shellname}}</view>
+        <view class="other-meta" data-title="boxname" data-id="{{bookData.id}}" data-key="{{bookData.boxname}}" bindtap='toUpdatePage'>盒子:{{bookData.boxname}}</view>
+    </view>
+    <view >
+    <navigator class="range" url="../weuiSavepage/weuisavepage">
+        <view class="viewers">收藏</view>
+    </navigator>
+    </view>
+</view>
+
+    <view class="book-intro">
+        <view class="intro-header"><text>简介</text></view>
+        <text class="intro-content">{{bookData.brief}}</text>
+    </view>
+</view>

@@ -1,0 +1,147 @@
+<!--test/example/example1.wxml-->
+<view wx:for="{{pageData}}">
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="weui-cells__title">基本内容</view>
+        <view class="weui-cells weui-cells_after-title">
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">标题</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="title" class="weui-input" value="{{item.title}}" placeholder="请输入书名"/>
+                </view>
+            </view>
+
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">ISBN</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="isbn" class="weui-input" value="{{item.isbn}}" placeholder="请输入isbn"/>
+                </view>
+            </view>
+            
+<view class="page__bd">
+      <view class="weui-cells">
+          <view class="weui-cell">
+              <view class="weui-cell__bd">
+                  <view class="weui-uploader">
+                      <view class="weui-uploader__hd">
+                        <view class="weui-uploader__overview">
+                            <view class="weui-uploader__title">封面</view>
+                            <view class="weui-uploader__info">{{imageList.length}}/1</view>
+                        </view>
+                        <view class="weui-uploader__tips">
+                          图片上传
+                        </view>
+                      </view>
+                      <view class="weui-uploader__bd">
+
+                          <view wx:if="{{imageIndex}}" class="weui-uploader__files" >
+                              <view class="weui-uploader__file">
+                                <image class="weui-uploader__img" src="{{item.image}}" data-image="{{item.image}}" bindtap="loadImage"></image>
+                              </view>
+                          </view>
+
+                          <view wx:else class="weui-uploader__files" >
+                            <block wx:for="{{imageList}}" wx:for-item="image">
+                              <view class="weui-uploader__file">
+                                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                              </view>
+                            </block>
+                          </view>
+
+                          <view class="weui-uploader__input-box">
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                          </view>
+                      </view>
+              </view>
+          </view>
+      </view>
+    </view>
+</view>
+          <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">书柜</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="shellname" class="weui-input" value="{{item.shellname}}" placeholder="存放书柜"/>
+                </view>
+            </view>
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">盒子号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="boxname" class="weui-input" value="{{item.boxname}}" placeholder="请输入盒子号"/>
+                </view>
+            </view>
+            
+</view>
+        
+<view class="weui-cells__title">详细信息</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">作者</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="author" class="weui-input" value="{{item.author}}" placeholder="请输入作者姓名"/>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">译者</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="translater" class="weui-input" value="{{item.translater}}" placeholder="请输入书籍译者" />
+                </view>
+            </view>
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">出版社</view>
+                </view>
+                <view class="weui-cell__bd">
+                  <input name="publish" class="weui-input" value="{{item.publish}}" placeholder="请输入书籍出版社"/>
+                </view>
+            </view>
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">出版日期</view>
+                </view>
+                 <view class="weui-cell__bd" data-date="{{item.publishdate}}">
+                          <view class="weui-input">{{item.publishdate}}</view>
+                </view>
+            </view>
+
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">定价</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="price" class="weui-input" value="{{item.price}}" placeholder="请输入书籍定价"/>
+                </view>
+            </view>
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">总页数</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="page" class="weui-input" value="{{item.page}}" placeholder="请输入书籍页数"/>
+                </view>
+            </view>    
+</view>
+
+ <view class="weui-cells__title">简介</view>
+  <view class="book-intro">
+        <textarea class="intro-content" auto-heigh value="{{item.brief}}"/>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">收藏</button>
+  </view>
+
+
+</form>
+</view>
