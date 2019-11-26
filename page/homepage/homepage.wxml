@@ -1,0 +1,62 @@
+<!-->
+<view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-ctn">
+        <image class="image" src="../../images/title.png"/>
+      </view>
+    </view>
+</view>
+
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell ">
+      <view class="weui-cell__hd">
+          <view class="weui-label">用户名</view>
+      </view>
+      <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入用户名"/>
+      </view>
+  </view>
+  <view class="weui-cell ">
+      <view class="weui-cell__hd">
+          <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd">
+          <input type="password" class="weui-input" placeholder="请输入密码"/>
+      </view>
+  </view>
+</view>
+
+<view class="page__bd page__bd_spacing">
+        <view class="button-sp-area">
+            <button class="weui-btn" type="primary">登录</button>
+            <button class="weui-btn" type="primary">注册</button>
+        </view>
+</view>
+<-->
+
+<view class="weui-cells">
+  <view class="weui-cell weui-cell_access">
+    <view class="weui-cell__hd">
+      <view class="user-info__avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+    <view class="weui-cell__bd">
+      <view class="user-info__name">
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+    <view class="weui-cell__ft"></view>
+  </view>
+</view>
+
+<view class="page-body">
+  <view class="btn-area" id="buttonContainer">
+    <view wx:if="{{isLogin==false}}">
+      <button type="primary" open-type='getUserInfo' bindgetuserinfo="login">微信登录</button>
+    </view>
+    <view wx:if="{{isLogin==true}}">
+      <button type="default" bindtap="logout">取消登录</button>
+    </view>
+  </view>
+</view>

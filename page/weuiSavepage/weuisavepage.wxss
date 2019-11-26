@@ -1,0 +1,12 @@
+/* page/weuiSavepage/weuisavepage.wxss */
+.book-intro {
+    margin-bottom: 40rpx;
+    padding: 20rpx;
+    background: #FAFAFA;
+}
+
+.book-intro .intro-content {
+    font-size: 35rpx;
+    line-height: 2;
+    text-align: justify
+}

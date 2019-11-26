@@ -1,0 +1,18 @@
+<view class="Top-place"/>
+
+<block wx:for="{{pageData}}">
+  <view class="list-item" data-isbn="{{item.isbn}}" bindtap="toDetailPage">
+    <view class="index-list-item">
+      <view class="cover">
+        <image class="cover-img" src="{{item.image}}"/>
+      </view>
+      <view class="content">
+        <view class="bookTitleAndShell">
+          <view class="title">{{item.title}}</view>
+          <view class="bookShell">{{item.shellname}}</view>
+        </view>
+        <view class="bookAuther">{{item.author}}</view>
+      </view>
+    </view>
+  </view>
+</block>

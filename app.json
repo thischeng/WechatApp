@@ -1,0 +1,71 @@
+{
+  "debug": true,
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#42BD56",
+    "navigationBarTitleText": "GoBook",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "pages": [
+    "page/homepage/homepage",
+    "page/manage/manage",
+    "page/index1/index1",
+    "page/index/index",
+    "page/booksave/booksave",
+    "page/detail/detail",
+    "page/list/list",
+    "page/booksave/writeIn/writeIn",
+    "page/weuiSavepage/weuisavepage",
+    "page/weuiindexManage/weuiindexManage",
+    "page/manageDetail/manageDetail",
+    "page/booksave/camera/camera",
+    "page/weuiupdatepage/updatepage",
+    "page/list/authorList",
+    "page/list/writeInList",
+    "page/weuiSavepage/weuisavepage1",
+    "page/manageDetail/authorManageDetail",
+    "page/weuiupdatepage/processUpdatepage"
+  ],
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#a7a7a7",
+    "list": [
+      {
+        "text": "主页",
+        "pagePath": "page/index1/index1",
+        "iconPath": "resources/6701772557845ed8fbde23568a495ad8.png",
+        "selectedIconPath": "resources/a59f84152e5044432f2f113109c160aa.png"
+      },
+      {
+        "text": "入库",
+        "pagePath": "page/booksave/booksave",
+        "iconPath": "resources/3b8853f33808dd175be1fb6c8d6023e2.png",
+        "selectedIconPath": "resources/75d1ae86a65810b61009231c7e910abe.png"
+      },
+      {
+        "text": "分析",
+        "pagePath": "page/manage/manage",
+        "iconPath": "resources/7e372fddc61a90067050485ba7623e45.png",
+        "selectedIconPath": "resources/5974ec5a84ee25642364a5845338d4c0.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "page/homepage/homepage",
+        "iconPath": "resources/85dc383821813b726d53db0417e37b0c.png",
+        "selectedIconPath": "resources/e4f017551eacfe60bac6ed874ffc38ba.png"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "white"
+  },
+  "networkTimeout": {
+    "connectSocket": 50000,
+    "request": 50000,
+    "downloadFile": 50000,
+    "uploadFile": 50000
+  },
+  "sitemapLocation": "sitemap.json"
+}

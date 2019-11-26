@@ -1,0 +1,11 @@
+App({
+  globalData:{
+    bookDetail:null,
+    saveDetail:null,
+    imageList:[],
+    islogin:false,
+    userInfo:null,
+    user_id:null,
+    token:null,
+  },
+})
